@@ -1,16 +1,26 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+  </head>
 
-<head>
-	<title>Parcel Sandbox</title>
-	<meta charset="UTF-8" />
-</head>
+  <body>
+    <div id="app"></div>
 
-<body>
-	<div id="app"></div>
+    <h1>TV show viewer</h1>
 
-	<script src="src/index.js">
-	</script>
-</body>
+    <input
+      type="text"
+      name="search"
+      id="input-show"
+      placeholder="Search TV show..."
+    />
 
+    <button id="submit-data">Search</button>
+
+    <div class="show-data"></div>
+
+    <script src="src/index.js"></script>
+  </body>
 </html>
