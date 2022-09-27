@@ -8,7 +8,7 @@ body {
   background-color: #cfd8dc;
   margin: 20px;
   padding: 10px;
-  border-radius: 10px;
+  border-radius: 6px;
   box-shadow: green;
 }
 
@@ -30,6 +30,17 @@ body {
   }
 
   .show-info {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 799px) {
+  img {
+    margin: auto;
+  }
+
+  .show-info p {
+    text-align: center;
     padding: 10px;
   }
 }
