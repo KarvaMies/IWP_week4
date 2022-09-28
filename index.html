@@ -4,21 +4,48 @@
     <title>Parcel Sandbox</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+      crossorigin="anonymous"
+    ></script>
   </head>
 
   <body>
-    <div id="app"></div>
+    <nav class="navbar navbar-expand-lg bg-light">
+      <div class="container-fluid">
+        <h1 class="navbar-brand">TV show viewer</h1>
+      </div>
 
-    <h1>TV show viewer</h1>
+      <form class="d-flex" role="search">
+        <input
+          class="form-control me-2"
+          type="search"
+          id="input-show"
+          placeholder="Search TV show..."
+          aria-label="Search"
+        />
 
-    <input
-      type="text"
-      name="search"
-      id="input-show"
-      placeholder="Search TV show..."
-    />
+        <button id="submit-data" class="btn btn-outline-success" type="submit">
+          Search
+        </button>
+      </form>
 
-    <button id="submit-data">Search</button>
+      <!--input
+        type="text"
+        name="search"
+        id="input-show"
+        placeholder="Search TV show..."
+      />
+
+      <button id="submit-data">Search</button-->
+    </nav>
 
     <div class="show-data"></div>
 
