@@ -1,7 +1,6 @@
 import "./styles.css";
 
 const submitButton = document.getElementById("submit-data");
-const content = document.getElementById("content");
 
 submitButton.addEventListener("click", (event) => {
   event.preventDefault();
@@ -23,8 +22,6 @@ async function fetchData(url) {
   const dataList = await dataPromise.json();
 
   dataList.forEach((title) => {
-    //<div class="show-data"></div>
-
     let dataElement = document.createElement("div");
     dataElement.setAttribute("class", "show-data");
 
@@ -42,10 +39,10 @@ async function fetchData(url) {
     let summary = document.createElement("p");
     summary.innerHTML = title.show.summary;
 
-    div.appendChild(img);
     div.appendChild(name);
     div.appendChild(summary);
 
+    dataElement.appendChild(img);
     dataElement.appendChild(div);
 
     document.body.appendChild(dataElement);
