@@ -48,6 +48,6 @@ async function fetchData(url) {
 
     dataElement.appendChild(div);
 
-    content.appendChild(dataElement);
+    document.body.appendChild(dataElement);
   });
 }
