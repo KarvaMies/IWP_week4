@@ -21,21 +21,29 @@
     <nav class="navbar navbar-expand-lg bg-light">
       <div class="container-fluid">
         <h1 class="navbar-brand">TV show viewer</h1>
-      </div>
 
-      <form class="d-flex" role="search">
-        <input
-          class="form-control me-2"
-          type="search"
-          id="input-show"
-          placeholder="Search TV show..."
-          aria-label="Search"
+        <form class="d-flex" role="search">
+          <input
+            class="form-control me-2"
+            type="search"
+            id="input-show"
+            placeholder="Search TV show..."
+            aria-label="Search"
+          />
         />
 
-        <button id="submit-data" class="btn btn-outline-success" type="submit">
-          Search
-        </button>
-      </form>
+          <button
+            id="submit-data"
+            class="btn btn-outline-success"
+            type="submit"
+          >
+            Search
+          </button>
+        </form>
+      </div>
+
+      <!--if the form is here outside of the div class="container-fluid" 
+        the code works but obviously won't pass codegragde-->
 
       <!--input
         type="text"

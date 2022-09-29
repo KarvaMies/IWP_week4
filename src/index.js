@@ -7,8 +7,15 @@ submitButton.addEventListener("click", () => {
   const url =
     "https://api.tvmaze.com/search/shows?q=" +
     document.getElementById("input-show").value;
+
+  console.log(".input-show:");
+  console.log(document.getElementById("input-show").value);
+
   fetchData(url);
 });
+
+console.log(".submit-data:");
+console.log(submitButton);
 
 async function fetchData(url) {
   const dataPromise = await fetch(url);
