@@ -11,7 +11,7 @@ body {
   margin: 20px;
   padding: 10px;
   border-radius: 6px;
-  box-shadow: green;
+  box-shadow: 10px 10px 5px gray;
 }
 
 .show-data h1 {
