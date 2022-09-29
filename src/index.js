@@ -1,9 +1,10 @@
 import "./styles.css";
 
 const submitButton = document.getElementById("submit-data");
-const showList = document.getElementsByClassName("show-data");
+const content = document.getElementById("content");
 
-submitButton.addEventListener("click", () => {
+submitButton.addEventListener("click", (event) => {
+  event.preventDefault();
   const url =
     "https://api.tvmaze.com/search/shows?q=" +
     document.getElementById("input-show").value;
@@ -22,6 +23,11 @@ async function fetchData(url) {
   const dataList = await dataPromise.json();
 
   dataList.forEach((title) => {
+    //<div class="show-data"></div>
+
+    let dataElement = document.createElement("div");
+    dataElement.setAttribute("class", "show-data");
+
     let img = document.createElement("img");
     // Some shows doesn't have an image
     if (!(title.show.image === null)) {
@@ -40,6 +46,8 @@ async function fetchData(url) {
     div.appendChild(name);
     div.appendChild(summary);
 
-    showList[0].appendChild(div);
+    dataElement.appendChild(div);
+
+    content.appendChild(dataElement);
   });
 }
